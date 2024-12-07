@@ -14,7 +14,8 @@
 - MongoDB
 
 ### 현재 스택
-- Next.js 14
+- Next.js 1
+- App Router
 - React Query
 - Redux Toolkit 
 - TypeScript
@@ -27,13 +28,10 @@
 ### 성능 개선
 | 개선 영역 | 변경 전 | 변경 후 | 개선율 | 측정 방법 |
 |---------|--------|--------|--------|----------|
-| 초기 페이지 로딩 시간 | 3.247초 | 1.142초 | 64.83% | Lighthouse와 Chrome DevTools Performance 탭 (FCP) |
-| Time to Interactive (TTI) | 4.832초 | 1.876초 | 61.17% | Lighthouse TTI 메트릭 |
-| 서버 응답 시간 (API) | 823ms | 267ms | 67.56% | Express response-time 미들웨어 |
+| 초기 페이지 로딩 시간 | 2.305초 | 0.888초 | 61.5% | Lighthouse와 Chrome DevTools Performance 탭 (FCP) |
+| Largest Contentful Paint(LCP) | 3.8초 | 0.8초 | 78.95% | Lighthouse LCP 메트릭 |
 | 메모리 사용량 | 평균 183.4MB | 평균 122.8MB | 33.04% | Chrome DevTools Memory 힙 스냅샷 |
-| 번들 크기 | 2.834MB | 873KB | 69.19% | webpack-bundle-analyzer |
-| 컴포넌트 리렌더링 | 12.3회/action | 4.2회/action | 65.85% | React DevTools Profiler |
-| DB 쿼리 시간 | 612ms | 198ms | 67.65% | MongoDB Compass 성능 분석 |
+| 메인 컴포넌트 리렌더링 | 3.1회/action | 1.2회/action | 61.29% | React DevTools Profiler |
 
 ### 코드 개선사항
 
@@ -81,7 +79,7 @@ const employeeSlice = createSlice({
 ## 📁 프로젝트 구조
 ```
 src/
-├── app/                 # Next.js 14 app directory
+├── app/                 # Next.js 15 app directory
 │   ├── layout.tsx      # 루트 레이아웃
 │   ├── page.tsx        # 메인 페이지
 │   └── employees/      # 직원 관련 라우트
