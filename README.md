@@ -30,7 +30,7 @@
 |---------|--------|--------|--------|----------|
 | 초기 페이지 로딩 시간 | 2.305초 | 0.888초 | 61.5% | Lighthouse와 Chrome DevTools Performance 탭 (FCP) |
 | Largest Contentful Paint(LCP) | 3.8초 | 0.8초 | 78.95% | Lighthouse LCP 메트릭 |
-| 메모리 사용량 | 평균 183.4MB | 평균 122.8MB | 33.04% | Chrome DevTools Memory 힙 스냅샷 |
+| 메모리 사용량 | 평균 5.6MB | 평균 4.2MB | 25.00% | Chrome DevTools Memory 힙 스냅샷 |
 | 메인 컴포넌트 리렌더링 | 3.1회/action | 1.2회/action | 61.29% | React DevTools Profiler |
 
 ### 코드 개선사항
